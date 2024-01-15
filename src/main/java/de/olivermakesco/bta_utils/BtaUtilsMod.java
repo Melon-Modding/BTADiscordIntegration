@@ -13,7 +13,7 @@ public class BtaUtilsMod implements ModInitializer {
     public void onInitialize() {
         new Thread(() -> {
             if (DiscordClient.init()) {
-                DiscordChatRelay.sendMessageAsBot("**MelonCreative Started**");
+                DiscordChatRelay.sendMessageAsBot("**Server Started**");
             }
         }).start();
     }

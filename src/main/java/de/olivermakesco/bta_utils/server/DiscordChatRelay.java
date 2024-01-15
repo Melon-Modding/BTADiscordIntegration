@@ -48,8 +48,8 @@ public class DiscordChatRelay {
         }
 
         WebhookMessageBuilder builder = new WebhookMessageBuilder();
-        builder.setUsername("MelonCreative");
-        builder.setAvatarUrl("https://cdn.discordapp.com/avatars/1171326205342007357/7579b2e23c3d8b1319e13067ce1a7250?size=1024");
+        builder.setUsername("Server");
+        builder.setAvatarUrl("https://static.miraheze.org/btawiki/thumb/b/bf/Bta-basket.png/160px-Bta-basket.png");
         builder.setContent(message);
         webhook.send(builder.build());
     }
