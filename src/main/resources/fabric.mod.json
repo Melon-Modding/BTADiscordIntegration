@@ -15,13 +15,13 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "de.olivermakesco.bta_utils.BtaUtilsMod"
+      "de.olivermakesco.bta_discord_integration.BTADiscordIntegrationMod"
     ],
     "client": [
     ]
   },
   "mixins": [
-    "bta_utils.mixins.json"
+    "bta_discord_integration.mixins.json"
   ],
 
   "depends": {
