@@ -18,7 +18,6 @@
       "de.olivermakesco.bta_utils.BtaUtilsMod"
     ],
     "client": [
-      "de.olivermakesco.bta_utils.client.BtaUtilsClient"
     ]
   },
   "mixins": [
