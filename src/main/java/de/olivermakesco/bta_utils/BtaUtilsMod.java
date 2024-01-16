@@ -7,7 +7,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class BtaUtilsMod implements ModInitializer {
-    public static final Logger LOGGER = LoggerFactory.getLogger("BTA Utils");
+    public static final Logger LOGGER = LoggerFactory.getLogger("BTA Discord Integration");
 
     @Override
     public void onInitialize() {

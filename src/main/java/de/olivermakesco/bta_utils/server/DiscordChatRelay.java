@@ -27,7 +27,7 @@ public class DiscordChatRelay {
         if (webhookClient == null) return;
         WebhookMessageBuilder builder = new WebhookMessageBuilder();
         builder.setUsername(author);
-        builder.setAvatarUrl("https://www.mc-heads.net/head/" + author);
+        builder.setAvatarUrl("https://www.mc-heads.net/head/" + author + "/" + "150");
         builder.setContent(message);
         webhookClient.send(builder.build());
     }
