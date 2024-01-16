@@ -15,7 +15,7 @@ public class Mixin_MinecraftServer {
     )
 
     void sendStopMessage(CallbackInfo ci) {
-        DiscordChatRelay.sendMessageAsBot("**Server Stopped**");
+        DiscordChatRelay.sendServerStoppedMessage();
     }
 
 }

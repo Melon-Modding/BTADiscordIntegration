@@ -17,8 +17,8 @@ public abstract class Mixin_EntityPlayerMP {
             method = "onDeath",
             at = @At("RETURN")
     )
-    void sendDeathMessage(Entity entity, CallbackInfo ci) {
+    void processDeathMessage(Entity entity, CallbackInfo ci) {
         String message = deathMessage(entity).replaceAll("§.", "");
-        DiscordChatRelay.sendMessageAsBot("**" + message + "**");
+        DiscordChatRelay.sendDeathMessage(message);
     }
 }
