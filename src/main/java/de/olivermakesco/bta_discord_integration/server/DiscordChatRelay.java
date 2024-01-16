@@ -73,6 +73,14 @@ public class DiscordChatRelay {
         sendMessage(null, embed);
     }
 
+    public static void sendServerSleepMessage() {
+        if (webhookClient == null) return;
+        WebhookEmbed embed = new WebhookEmbedBuilder()
+                .setColor(0xFFFF00)
+                .setAuthor(new WebhookEmbed.EmbedAuthor("The Night was Skipped", "https://i.imgur.com/R1e1sJS.png", null))
+                .build();
+        sendMessage(null, embed);
+    }
     public static void sendMessage(String content, WebhookEmbed embed) {
         if (webhookClient == null) return;
         WebhookMessageBuilder builder = new WebhookMessageBuilder();

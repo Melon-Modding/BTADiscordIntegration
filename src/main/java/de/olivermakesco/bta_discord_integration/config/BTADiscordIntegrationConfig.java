@@ -19,7 +19,7 @@ public class BTADiscordIntegrationConfig {
     public static boolean discord_enable = false;
     public static String discord_token = "SUPER SECRET TOKEN";
     public static String discord_channel = "CHANNEL ID";
-    public static String discord_serverpfp_url = "https://i.imgur.com/SXd58i2.png";
+    public static String discord_serverpfp_url = "https://i.imgur.com/dJUId0O.png";
     public static String discord_servername = "Server";
 
     public static void load() {

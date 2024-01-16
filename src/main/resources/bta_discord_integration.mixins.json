@@ -6,11 +6,15 @@
   "mixins": [
     "server.Mixin_EntityPlayerMP",
     "server.Mixin_NetLoginHandler",
-    "server.Mixin_NetServerHandler"
+    "server.Mixin_NetServerHandler",
+    "server.Mixin_World"
   ],
   "client": [
   ],
   "injectors": {
     "defaultRequire": 1
-  }
+  },
+  "server": [
+    "server.Mixin_MinecraftServer"
+  ]
 }
