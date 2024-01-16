@@ -19,6 +19,8 @@ public class BTADiscordIntegrationConfig {
     public static boolean discord_enable = false;
     public static String discord_token = "SUPER SECRET TOKEN";
     public static String discord_channel = "CHANNEL ID";
+    public static String discord_serverpfp_url = "";
+    public static String discord_servername = "";
 
     public static void load() {
         File file = getFilePath();
@@ -75,13 +77,11 @@ public class BTADiscordIntegrationConfig {
     }
 
     public static void updateValues(JsonObject object) {
-        /* discord = */ {
-            JsonObject discord = get(object, "discord", new JsonObject());
-            discord_enable = get(discord, "enable", discord_enable);
-            discord_token = get(discord, "token", discord_token);
-            discord_channel = get(discord, "channel", discord_channel);
-            object.add("discord", discord);
-        }
+            discord_enable = get(object, "enable", discord_enable);
+            discord_token = get(object, "token", discord_token);
+            discord_channel = get(object, "channel", discord_channel);
+            discord_serverpfp_url = get(object, "serverpfp_url", discord_serverpfp_url);
+            discord_servername = get(object, "servername", discord_servername);
     }
 
     public static File getFilePath() {

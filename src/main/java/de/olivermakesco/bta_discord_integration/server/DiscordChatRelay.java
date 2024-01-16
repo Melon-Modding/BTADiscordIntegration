@@ -4,6 +4,7 @@ import club.minnced.discord.webhook.external.JDAWebhookClient;
 import club.minnced.discord.webhook.send.WebhookEmbed;
 import club.minnced.discord.webhook.send.WebhookEmbedBuilder;
 import club.minnced.discord.webhook.send.WebhookMessageBuilder;
+import de.olivermakesco.bta_discord_integration.config.BTADiscordIntegrationConfig;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.core.net.command.TextFormatting;
 import java.time.Instant;
@@ -75,8 +76,8 @@ public class DiscordChatRelay {
     public static void sendMessage(String content, WebhookEmbed embed) {
         if (webhookClient == null) return;
         WebhookMessageBuilder builder = new WebhookMessageBuilder();
-        builder.setUsername("Server");
-        builder.setAvatarUrl("https://i.imgur.com/SXd58i2.png");
+        builder.setUsername(BTADiscordIntegrationConfig.discord_servername);
+        builder.setAvatarUrl(BTADiscordIntegrationConfig.discord_serverpfp_url);
         if (content != null && !content.isEmpty()) {
             builder.setContent(content);
         }
