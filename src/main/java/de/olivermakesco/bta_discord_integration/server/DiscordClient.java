@@ -75,7 +75,7 @@ public class DiscordClient {
             return owner.getId().equals(jda.getSelfUser().getId());
         }).findFirst();
 
-        Webhook webhook = optionalWebhook.orElseGet(() -> channel.createWebhook("BTA Discord Integration Chat Link").complete());
+        Webhook webhook = optionalWebhook.orElseGet(() -> channel.createWebhook("BTA DC Integration Chat Link").complete());
 
         if (webhook == null) {
             return null;
@@ -128,3 +128,4 @@ public class DiscordClient {
         }
     }
 }
+
