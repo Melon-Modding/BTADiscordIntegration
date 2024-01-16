@@ -1,10 +1,9 @@
-package de.olivermakesco.bta_utils.config;
+package de.olivermakesco.bta_discord_integration.config;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import de.olivermakesco.bta_utils.BtaUtilsMod;
 import net.fabricmc.loader.api.FabricLoader;
 
 import java.io.File;
@@ -12,7 +11,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class BtaUtilsConfig {
+public class BTADiscordIntegrationConfig {
     public static final Gson GSON = new GsonBuilder()
             .setPrettyPrinting()
             .create();
@@ -90,7 +89,7 @@ public class BtaUtilsConfig {
     }
 
     public static void printConfigValues() {
-        BtaUtilsMod.info("discord.enable = " + discord_enable);
+        de.olivermakesco.bta_discord_integration.BTADiscordIntegrationMod.info("discord.enable = " + discord_enable);
     }
 
     static {

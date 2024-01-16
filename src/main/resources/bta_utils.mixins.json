@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "de.olivermakesco.bta_utils.mixin",
+  "package": "de.olivermakesco.bta_discord_integration.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "server.Mixin_EntityPlayerMP",

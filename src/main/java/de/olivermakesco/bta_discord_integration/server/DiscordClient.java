@@ -1,8 +1,6 @@
-package de.olivermakesco.bta_utils.server;
+package de.olivermakesco.bta_discord_integration.server;
 
 import club.minnced.discord.webhook.external.JDAWebhookClient;
-import de.olivermakesco.bta_utils.BtaUtilsMod;
-import de.olivermakesco.bta_utils.config.BtaUtilsConfig;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.User;
@@ -24,13 +22,13 @@ public class DiscordClient {
     public static StandardGuildMessageChannel channel;
 
     public static boolean init() {
-        if (!BtaUtilsConfig.discord_enable) {
+        if (!de.olivermakesco.bta_discord_integration.config.BTADiscordIntegrationConfig.discord_enable) {
             return false;
         }
 
         try {
             JDABuilder builder = JDABuilder.create(
-                    BtaUtilsConfig.discord_token,
+                    de.olivermakesco.bta_discord_integration.config.BTADiscordIntegrationConfig.discord_token,
                     GatewayIntent.GUILD_MESSAGES,
                     GatewayIntent.MESSAGE_CONTENT,
                     GatewayIntent.GUILD_WEBHOOKS
@@ -41,7 +39,7 @@ public class DiscordClient {
 
             return true;
         } catch (Throwable t) {
-            BtaUtilsMod.LOGGER.debug("Unable to start discord bot.", t);
+            de.olivermakesco.bta_discord_integration.BTADiscordIntegrationMod.LOGGER.debug("Unable to start discord bot.", t);
             return false;
         }
     }
@@ -52,7 +50,7 @@ public class DiscordClient {
         }
 
         if (channel == null) {
-            channel = jda.getChannelById(StandardGuildMessageChannel.class, BtaUtilsConfig.discord_channel);
+            channel = jda.getChannelById(StandardGuildMessageChannel.class, de.olivermakesco.bta_discord_integration.config.BTADiscordIntegrationConfig.discord_channel);
         }
 
         return channel;
@@ -105,7 +103,7 @@ public class DiscordClient {
                     return;
                 }
 
-                if (!message.getMessage().getChannel().getId().equals(BtaUtilsConfig.discord_channel)) {
+                if (!message.getMessage().getChannel().getId().equals(de.olivermakesco.bta_discord_integration.config.BTADiscordIntegrationConfig.discord_channel)) {
                     return;
                 }
 

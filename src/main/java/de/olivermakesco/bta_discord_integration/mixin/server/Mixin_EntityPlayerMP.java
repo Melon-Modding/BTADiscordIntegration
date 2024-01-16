@@ -1,6 +1,6 @@
-package de.olivermakesco.bta_utils.mixin.server;
+package de.olivermakesco.bta_discord_integration.mixin.server;
 
-import de.olivermakesco.bta_utils.server.DiscordChatRelay;
+import de.olivermakesco.bta_discord_integration.server.DiscordChatRelay;
 import net.minecraft.core.entity.Entity;
 import net.minecraft.server.entity.player.EntityPlayerMP;
 import org.spongepowered.asm.mixin.Mixin;

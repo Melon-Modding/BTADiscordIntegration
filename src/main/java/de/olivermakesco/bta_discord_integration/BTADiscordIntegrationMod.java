@@ -1,12 +1,12 @@
-package de.olivermakesco.bta_utils;
+package de.olivermakesco.bta_discord_integration;
 
-import de.olivermakesco.bta_utils.server.DiscordChatRelay;
-import de.olivermakesco.bta_utils.server.DiscordClient;
+import de.olivermakesco.bta_discord_integration.server.DiscordChatRelay;
+import de.olivermakesco.bta_discord_integration.server.DiscordClient;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class BtaUtilsMod implements ModInitializer {
+public class BTADiscordIntegrationMod implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("BTA Discord Integration");
 
     @Override

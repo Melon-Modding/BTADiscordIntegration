@@ -1,7 +1,6 @@
-package de.olivermakesco.bta_utils.mixin.server;
+package de.olivermakesco.bta_discord_integration.mixin.server;
 
-import de.olivermakesco.bta_utils.config.BtaUtilsConfig;
-import de.olivermakesco.bta_utils.server.DiscordChatRelay;
+import de.olivermakesco.bta_discord_integration.server.DiscordChatRelay;
 import net.minecraft.server.entity.player.EntityPlayerMP;
 import net.minecraft.server.net.ChatEmotes;
 import net.minecraft.server.net.handler.NetServerHandler;
@@ -26,7 +25,7 @@ public class Mixin_NetServerHandler {
     String redirectChatHandle(String s) {
         String message = ChatEmotes.process(s);
 
-        if (!BtaUtilsConfig.discord_enable) {
+        if (!de.olivermakesco.bta_discord_integration.config.BTADiscordIntegrationConfig.discord_enable) {
             return message;
         }
 
