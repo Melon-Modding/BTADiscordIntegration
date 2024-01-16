@@ -17,8 +17,6 @@ public class BtaUtilsConfig {
             .setPrettyPrinting()
             .create();
 
-    public static boolean useSdl = true;
-    public static boolean disableTrample = false;
     public static boolean discord_enable = false;
     public static String discord_token = "SUPER SECRET TOKEN";
     public static String discord_channel = "CHANNEL ID";
@@ -78,9 +76,6 @@ public class BtaUtilsConfig {
     }
 
     public static void updateValues(JsonObject object) {
-        useSdl = get(object, "use_sdl", useSdl);
-        disableTrample = get(object, "disable_trample", disableTrample);
-
         /* discord = */ {
             JsonObject discord = get(object, "discord", new JsonObject());
             discord_enable = get(discord, "enable", discord_enable);
@@ -95,8 +90,6 @@ public class BtaUtilsConfig {
     }
 
     public static void printConfigValues() {
-        BtaUtilsMod.info("use_sdl = " + useSdl);
-        BtaUtilsMod.info("disable_trample = " + disableTrample);
         BtaUtilsMod.info("discord.enable = " + discord_enable);
     }
 
