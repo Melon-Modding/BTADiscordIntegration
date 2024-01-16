@@ -86,7 +86,7 @@ public class BtaUtilsConfig {
     }
 
     public static File getFilePath() {
-        return FabricLoader.getInstance().getConfigDir().resolve("bta_utils.json").toFile();
+        return FabricLoader.getInstance().getConfigDir().resolve("bta_discord_integration.json").toFile();
     }
 
     public static void printConfigValues() {
