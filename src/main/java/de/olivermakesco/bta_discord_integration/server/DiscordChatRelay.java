@@ -76,7 +76,7 @@ public class DiscordChatRelay {
     public static void sendServerSleepMessage() {
         if (webhookClient == null) return;
         WebhookEmbed embed = new WebhookEmbedBuilder()
-                .setColor(0xFFFF00)
+                .setColor(0x222d5a)
                 .setAuthor(new WebhookEmbed.EmbedAuthor("The Night was Skipped", "https://i.imgur.com/R1e1sJS.png", null))
                 .build();
         sendMessage(null, embed);
