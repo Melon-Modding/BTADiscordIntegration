@@ -4,7 +4,7 @@
   "package": "de.olivermakesco.bta_discord_integration.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "server.Mixin_EntityPlayerMP",
+    "server.Mixin_EntityLiving",
     "server.Mixin_NetLoginHandler",
     "server.Mixin_NetServerHandler",
     "server.Mixin_World"
